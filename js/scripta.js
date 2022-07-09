@@ -1,5 +1,11 @@
-let popupcontainer = document.querySelector('.popupcontainer');
+let container = document.querySelector('.container');
 
 document.querySelector('#btn').onclick = () =>{
-    popupcontainer.classList.toggle('active');
+    container.classList.toggle('active');
 }
+
+document.querySelector('#close-btn').onclick = () =>{
+    container.classList.toggle('active');
+}
+
+

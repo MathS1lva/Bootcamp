@@ -3,7 +3,7 @@
 
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dancing Script', cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
+    transition: all .2s linear;
 }
 
 html{
@@ -19,17 +19,17 @@ html{
     overflow-x: hidden;
 }
 
+/* Começo header */
 .header{
     background: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3% 0 2%;   
+    padding: 0 2%;   
     height: 70px;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 1000;
 }
 
@@ -68,9 +68,10 @@ html{
 
 .header .icons div:hover{
     font-size: 3.5rem;
-    transition: all .3s;
 }
+/*Fim header */
 
+/* Começo home */
 .home .ingredients{
     width: 50%;
 }
@@ -93,7 +94,6 @@ html{
 
 .btn:hover{
     transform: scale(1.1);
-    transition: all .2s;
 }
 
 .home .image{
@@ -109,7 +109,6 @@ html{
 }
 
 .ingredients .text h2{
-    font-family: 'Dancing Script', cursive;
     color: white;
     font-size: 30px;
     line-height: 100px;
@@ -122,7 +121,6 @@ html{
 .ingredients .text ul li{
     color: white;
     font-size: 20px;
-    font-family: 'Dancing Script', cursive;
     line-height: 30px;
 }
 
@@ -132,29 +130,24 @@ html{
     left: 6%;
     font-size: 30px;
     color: white;
-    font-family: 'Dancing Script', cursive;
 }
+/* Fim home */
 
-
-
-
-
-
-.popup-container{
+/* Começo pop-up */
+.container{
     height: 100vh;
     width: 100vw;
     z-index: 1100;
     background-color: rgba(10, 10, 10, .6);
     position: absolute;
     top: 0;
-    left: 0;
+    right: -100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 100%;
 }
 
-.popup-container .popup{
+.container .popup{
     background: url(/images/959ed78d905853d68b688960f9dec75f.png);
     width: 750px;
     height: 750px;
@@ -164,7 +157,7 @@ html{
     justify-content:space-around;
 }
 
-.popup-container .popup h2{
+.container .popup h2{
     margin-top: 120px;
     margin-left: 80px;
     font-family: 'Dancing Script', cursive;
@@ -174,20 +167,19 @@ html{
 }
 
 
-.popup-container .popup ol{
+.container .popup ol{
     margin-top: 30px;
     width: 55%;
     z-index: 11;
     margin-left: 240px;
 }
 
-.popup-container .popup li{
-    font-family: 'Dancing Script', cursive;
+.container .popup li{
     font-size: 15px;
 
 }
 
-.popup-container #close-btn{
+.container #close-btn{
     position: absolute;
     font-size: 50px;
     top: 10px;
@@ -196,11 +188,11 @@ html{
     cursor: pointer;
 }
 
-.popup-container #close-btn:hover{
+.container #close-btn:hover{
     font-size: 55px;
-    transition: all .3s;
 }
 
-
-
-
+.container.active{
+    right: 0;
+}
+/* Fim pop-up */

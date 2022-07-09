@@ -15,7 +15,7 @@ html ::-webkit-scrollbar-thumb{
 }
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dancing Script', cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +23,7 @@ html ::-webkit-scrollbar-thumb{
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
+    transition: all .2s linear;
 }
 
 html{
@@ -33,6 +33,7 @@ html{
     overflow-x: hidden;
 }
 
+/* Começo header */
 .header{
     background: black;
     display: flex;
@@ -45,21 +46,6 @@ html{
     left: 0;
     right: 0;
     z-index: 1000;
-}
-
-.home{
-    height: max-content;
-    width: 100%;
-    background: url(../images/brown-wooden-flooring.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 82px;
-    position: static;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
 }
 
 .module-border{
@@ -84,7 +70,22 @@ html{
 
 .header .icons div:hover{
     font-size: 3.5rem;
-    transition: all .3s;
+}
+/* Fim header */
+
+/* Começo home */
+.home{
+    height: max-content;
+    background: url(../images/brown-wooden-flooring.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 82px;
+    position: static;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .home .ingredients{
@@ -125,11 +126,9 @@ html{
 
 .btn:hover{
     transform: scale(1.1);
-    transition: all .2s;
 }
 
 .ingredients .text h2{
-    font-family: 'Dancing Script', cursive;
     color: white;
     font-size: 30px;
     line-height: 80px;
@@ -142,8 +141,6 @@ html{
 .ingredients .text ul li{
     color: white;
     font-size: 20px;
-    font-family: 'Dancing Script', cursive;
-    
 }
 
 .ingredients .text{
@@ -156,35 +153,24 @@ html{
     left: 6%;
     font-size: 30px;
     color: white;
-    font-family: 'Dancing Script', cursive;
 }
+/* Fim home */
 
-
-
-
-.popupcontainer{
+/* Começo pop-up */
+.container{
     height: 100vh;
     width: 100vw;
     z-index: 1100;
     background-color: rgba(10, 10, 10, .6);
     position: absolute;
     top: 0;
-    left: 0;
+    right: -110%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 100%;
 }
 
-.popupcontainer .btn.active{
-    margin-left: 0%;
-}
-
-.popupcontainer #close-btn.active{
-    margin-left: 100%;
-}
-
-.popupcontainer .popup{
+.container .popup{
     background: url(/images/959ed78d905853d68b688960f9dec75f.png);
     width: 750px;
     height: 750px;
@@ -194,30 +180,26 @@ html{
     justify-content:space-around;
 }
 
-.popupcontainer .popup h2{
+.container .popup h2{
     margin-top: 120px;
     margin-left: 80px;
-    font-family: 'Dancing Script', cursive;
     color: black;
     font-size: 30px;
     z-index: 11;
 }
 
-
-.popupcontainer .popup ol{
+.container .popup ol{
     margin-top: 30px;
     width: 55%;
     z-index: 11;
     margin-left: 240px;
 }
 
-.popupcontainer .popup li{
-    font-family: 'Dancing Script', cursive;
+.container .popup li{
     font-size: 15px;
-
 }
 
-.popupcontainer #close-btn{
+.container #close-btn{
     position: absolute;
     font-size: 50px;
     top: 10px;
@@ -226,11 +208,11 @@ html{
     cursor: pointer;
 }
 
-.popupcontainer #close-btn:hover{
+.container #close-btn:hover{
     font-size: 55px;
-    transition: all .3s;
 }
 
-
-
-
+.container.active{
+    right: 0;
+}
+/* Fim pop-up */
