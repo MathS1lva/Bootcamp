@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Dancing+Script:wght@100;300;400;500;600;700 & display=swap');
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.header{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3% 0 2%;   
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.home{
+    height: 100vh;
+    background: url(../images/brown-wooden-flooring.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.module-border{
+    background: linear-gradient(to right, green, white, red);  
+    height: 82px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999,
+}
+
+.header .flag img{
+    height: 100px;
+}
+
+.header .icons div{
+    color: gray;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.header .icons div:hover{
+    font-size: 3.5rem;
+    transition: all .3s;
+}
+
+.home .ingredients{
+    width: 50%;
+    display: inline-block;
+}
+
+.home .image{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .image img{
+    width: 70%;
+    z-index: 1000;
+}
+
+.ingredients .text .btn{
+    padding: 2px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border: solid 2px white;
+    width: 19%;
+}
+
+.square-detail{
+    height: 310px;
+    width: 545px;
+    border: solid 8px rgb(255, 234, 101);
+    z-index: 1001;
+    position: absolute;
+    margin-left: 65px;
+    margin-bottom: 60px;
+}
+
+.ingredients .text h2{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.ingredients .text ul{
+    list-style: none;
+}
+
+.ingredients .text ul li{
+    color: white;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+.image h1{
+    position: absolute;
+    top: 16%;
+    left: 6%;
+    font-size: 30px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+
+
+.popupcontainer{
+    height: 100vh;
+    width: 100vw;
+    z-index: 1100;
+    background-color: rgba(10, 10, 10, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100%;
+}
+
+.popupcontainer .btn.active{
+    margin-left: 0%;
+}
+
+.popupcontainer #close-btn.active{
+    margin-left: 100%;
+}
+
+.popupcontainer .popup{
+    background: url(/images/959ed78d905853d68b688960f9dec75f.png);
+    width: 750px;
+    height: 750px;
+    background-size: contain;
+    display: inline-block;
+    text-align: center;
+    justify-content:space-around;
+}
+
+.popupcontainer .popup h2{
+    margin-top: 120px;
+    margin-left: 80px;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    font-size: 30px;
+    z-index: 11;
+}
+
+
+.popupcontainer .popup ol{
+    margin-top: 30px;
+    width: 55%;
+    z-index: 11;
+    margin-left: 240px;
+}
+
+.popupcontainer .popup li{
+    font-family: 'Dancing Script', cursive;
+    font-size: 15px;
+
+}
+
+.popupcontainer #close-btn{
+    position: absolute;
+    font-size: 50px;
+    top: 10px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.popupcontainer #close-btn:hover{
+    font-size: 55px;
+    transition: all .3s;
+}
+
+
+
+
