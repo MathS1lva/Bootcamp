@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Dancing+Script:wght@100;300;400;500;600;700 & display=swap');
 
+html ::-webkit-scrollbar{
+    width: 15px;
+}
+
+html ::-webkit-scrollbar-track{
+    background-color: black;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 5px;
+}
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -36,14 +48,18 @@ html{
 }
 
 .home{
-    height: 100vh;
+    height: max-content;
+    width: 100%;
     background: url(../images/brown-wooden-flooring.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 82px;
+    position: static;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .module-border{
@@ -72,40 +88,44 @@ html{
 }
 
 .home .ingredients{
-    width: 50%;
+    width: 100%;
+    padding: 50px 0px 80px;
     display: inline-block;
-}
-
-.home .image{
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.home .image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0px 50px;
+}
+
 .home .image img{
-    width: 70%;
+    width: 100%;
     z-index: 1000;
 }
 
-.ingredients .text .btn{
+.image-container{
+    width: 40%;
+}
+
+.btn{
     padding: 2px;
     margin-top: 20px;
     font-size: 20px;
     color: white;
     cursor: pointer;
     border: solid 2px white;
-    width: 19%;
+    width: fit-content;
 }
 
-.square-detail{
-    height: 310px;
-    width: 545px;
-    border: solid 8px rgb(255, 234, 101);
-    z-index: 1001;
-    position: absolute;
-    margin-left: 65px;
-    margin-bottom: 60px;
+.btn:hover{
+    transform: scale(1.1);
+    transition: all .2s;
 }
 
 .ingredients .text h2{
@@ -126,7 +146,11 @@ html{
     
 }
 
-.image h1{
+.ingredients .text{
+    text-align: center;
+}
+
+.home h1{
     position: absolute;
     top: 16%;
     left: 6%;

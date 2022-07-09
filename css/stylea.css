@@ -34,10 +34,12 @@ html{
 }
 
 .home{
-    height: 100vh;
+    height: calc(100vh - 82px);
     background: url(../images/brown-wooden-flooring.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    position: static;
+    margin-top: 82px;
 
     display: flex;
     align-items: center;
@@ -73,14 +75,25 @@ html{
     width: 50%;
 }
 
-.ingredients .text .btn{
+.image-container{
+    width: 70%;
+    height: 70%;
+    margin-top: 80px;
+}
+
+ .btn{
     padding: 2px;
     margin-top: 20px;
     font-size: 20px;
     color: white;
     cursor: pointer;
     border: solid 2px white;
-    width: 19%;
+    width: max-content;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: all .2s;
 }
 
 .home .image{
@@ -91,18 +104,8 @@ html{
 }
 
 .home .image img{
-    width: 70%;
+    width: 100%;
     z-index: 1000;
-}
-
-.square-detail{
-    height: 380px;
-    width: 545px;
-    border: solid 8px rgb(255, 234, 101);
-    z-index: 1001;
-    position: absolute;
-    margin-top: 50px;
-    margin-left: 65px;
 }
 
 .ingredients .text h2{
@@ -123,7 +126,7 @@ html{
     line-height: 30px;
 }
 
-.image h1{
+.home h1{
     position: absolute;
     top: 16%;
     left: 6%;

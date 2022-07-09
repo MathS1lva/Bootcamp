@@ -3,7 +3,7 @@
 
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dancing Script', cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
+    transition: all .2s linear;
 }
 
 html{
@@ -19,27 +19,26 @@ html{
     overflow-x: hidden;
 }
 
+/* Começo header */
 .header{
     background: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3% 0 2%;   
+    padding: 0 2%;   
     height: 70px;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 1000;
 }
 
 .module-border{
     background: linear-gradient(to right, green, white, red);  
     height: 82px;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 999,
 }
 
@@ -47,17 +46,61 @@ html{
     height: 100px;
 }
 
-.header .icons div{
+.header .icon div{
     color: gray;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 35px;
 }
 
-.header .icons div:hover{
-    font-size: 3.5rem;
-    transition: all .3s;
+.header .icon div:hover{
+    font-size: 40px;
 }
 
+.header .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: url(/images/tomate-cereja-em-uma-mesa-de-madeira-preta-copie-o-espaco-plano-de-fundo-para-cafe-menu-livro-de-receitas-para-receitas-restaurante_168091-67\ \(1\).jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 30px;
+    width: 320px;
+    height: 230px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .navbar.active{
+    right: 0;
+}
+
+.header .navbar-link{
+    position: relative;
+    height: 60%;
+    width: 70%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    float: right;
+}
+
+.header .navbar a{
+    color: green;
+    padding: .5rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.header .navbar a:hover{
+    color: red;
+    padding-bottom: .5rem;
+    font-size: 2.1rem;
+}
+/* Fim header */
+
+/* Começo home */
 .home{
     height: 100vh;
     background: url(../images/iStock-1202699207.jpg) no-repeat;
@@ -72,56 +115,14 @@ html{
 .text-area .culinaria{
     font-size: 50px;
     color: white;
-    font-family: 'Dancing Script', cursive;
 }
 
 .text-area .italiana{
     font-size: 100px;
     color: white;
-    font-family: 'Dancing Script', cursive;
 }
 
 .text-area{
     padding-left: 100px;
 }
-
-.header .navbar a:hover{
-    color: red;
-    border-bottom: .1rem solid red;
-    padding-bottom: .5rem;
-    font-size: 2.1rem;
-    transition: all .3s;
-}
-
-.header .navbar{
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background: url(/images/tomate-cereja-em-uma-mesa-de-madeira-preta-copie-o-espaco-plano-de-fundo-para-cafe-menu-livro-de-receitas-para-receitas-restaurante_168091-67\ \(1\).jpeg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-bottom-left-radius: 30px;
-    width: 30rem;
-    height: calc(100vh - 70vh);
-    display: block;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-.header .navbar.active{
-    right: 0;
-}
-
-.header .navbar a{
-    color: green;
-    display: block;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-    margin-left: 55%;
-    margin-right: 10%;
-    padding: .5rem;
-    font-size: 2rem;
-    font-weight: 500;
-}
+/* Fim home */
